@@ -2,11 +2,11 @@
 
 Customer Segmentation Using Clustering Based On Wine Preferences
 
-#Data
+# Data
 
 The dataset contains information on marketing newsletters/e-mail campaigns (e-mail offers sent to customers) and transaction level data from customers. The transactional data shows which offer customers responded to, and what the customer ended up buying. The data is presented as an Excel workbook containing two worksheets. Each worksheet contains a different dataset.
 
-#Methodology
+# Methodology
 
 We're trying to learn more about how our customers behave, so we can use their behavior (whether or not they purchased something based on an offer) as a way to group similar minded customers together. We can then study those groups to look for patterns and trends which can help us formulate future offers.
 
@@ -14,25 +14,25 @@ The first thing we need is a way to compare customers. To do this, we're going t
 
 Next we transform the dataset into a 2D sparse matrix for clustering. This is done by first grouping the data by the customer name and offer_id based on the frequency of each combination. Then the dataset is unstacked to create a 2D representation.
 
-#Strategies for choosing the optimal K (number of clusters):
+# Strategies for choosing the optimal K (number of clusters):
 - Elbow Method
 - Silhouette Method
 - Gap Statistic
 
-#Visualizing Clusters using PCA
+# Visualizing Clusters using PCA
 
 How do we visualize clusters? If we only had two features, we could likely plot the data as is. But we have 100 data points each containing 32 features (dimensions). Principal Component Analysis (PCA) will help us reduce the dimensionality of our data from 32 to something lower. For a visualization on the coordinate plane, we will use 2 dimensions.
 
 This is only one use of PCA for dimension reduction. We can also use PCA when we want to perform regression but we have a set of highly correlated variables. PCA untangles these correlations into a smaller number of features/predictors all of which are orthogonal (not correlated). PCA is also used to reduce a large set of variables into a much smaller one.
 
-#Results
+# Results
 
 Visually, the scatterplot with K=3 provides the best result despite not having the best silhouette score. For K=7, clusters 0 and 1 are distinct but the others tend to overlap making the distinction blurry.
 
-#Analyzing clusters
+# Analyzing clusters
 In order to differentiate between the clusters, we need to create a mapping between the customer names and the cluster labels
 
-#Observations
+# Observations
 
 Above, we have grouped the dataframe by each cluster to observe the differences in mean. The offer_id column does not provide much useful information since it's simply an identification feature.
 

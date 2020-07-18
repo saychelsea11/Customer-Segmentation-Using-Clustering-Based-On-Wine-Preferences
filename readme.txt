@@ -41,3 +41,5 @@ The min_qty column indicates that cluster 0 has the highest average value at 80.
 Customers in cluster 0 also tend to respond to higher discounts on average whereas cluster 1 has the lowest discount value. Clusters 0 and 2 are similar when it comes to the past peak values, 0.207 and 0.193 respectively whereas cluster 1 shows a value of 0. Hence customers in cluster 1 always tend to respond to offers where the wines are never past their peak. For clusters 0 and 2, while the values are higher, they are still leaning more towards 0 than 1.
 
 What we've done is we've taken those columns of 0/1 indicator variables, and we've transformed them into a 2-D dataset. We took one column and arbitrarily called it x and then called the other y. Now we can throw each point into a scatterplot. We color coded each point based on it's cluster so it's easier to see them.
+
+![alt text](https://github.com/saychelsea11/Customer-Segmentation-Using-Clustering-Based-On-Wine-Preferences/blob/master/K_means_elbow.JPG)
